@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
     return (
-        <div className=''>
-            <Link to='/home'>Home</Link>
-            <Link to='/order'>Order</Link>
-            <h1>Welcome to t-shirt mania!!!</h1>
+        <div className='bg-sky-200 p-6 flex justify-between sticky top-0'>
+            <div className='text-xl font-sans font-bold text-gray-700'>
+                <p>T-Shirt Mania</p>
+            </div>
+            <div className='flex gap-3 font-semibold text-gray-600'>
+                <CustomLink to='/home'>Home</CustomLink>
+                <CustomLink to='/order'>Order</CustomLink>
+            </div>
+
         </div>
     );
 };
