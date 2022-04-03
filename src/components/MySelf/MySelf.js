@@ -1,11 +1,15 @@
 import React from 'react';
+import Special from '../Special/Special';
 
-const MySelf = () => {
+const MySelf = ({ property, ornament }) => {
     return (
-        <div>
-            <h1>this is my self.
+        <div className='border border-2 border-red-400 p-9'>
+            <h1>Me
 
             </h1>
+            <p className=' text-sm'>Property: {property}</p>
+            <div className='border border-2 border-red-400 p-9'>
+                <Special ornament={ornament} /></div>
         </div>
     );
 };

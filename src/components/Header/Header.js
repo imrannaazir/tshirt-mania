@@ -11,6 +11,7 @@ const Header = () => {
             <div className='flex gap-3 font-semibold text-gray-600'>
                 <CustomLink to='/home'>Home</CustomLink>
                 <CustomLink to='/order'>Order</CustomLink>
+                <CustomLink to='/grandpa'>Grandpa</CustomLink>
             </div>
 
         </div>
