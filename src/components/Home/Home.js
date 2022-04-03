@@ -22,6 +22,12 @@ const Home = () => {
         setCart(restItems);
 
     }
+    let command;
+    if (cart.length >= 4) {
+        command = <div>
+            <p>tumi 4 ta kinbe?</p>
+        </div>
+    }
 
     return (
         <div>
@@ -41,12 +47,16 @@ const Home = () => {
 
                 <div className="cart-container  lg:col-span-1 col-span-2 bg-fuchsia-400 fixed right-0 min-h-screen">
                     <p className='text-xl font-semibold'>Your Selected Products:</p>
+                    {command}
 
                     {
 
                         cart.map(item => <Cart removedItem={removedItem} key={item.id} item={item} />
                         )
                     }
+                    {cart.length === 0 ? <p>Sala fokir order kor!</p> : <p>aito valo cele</p>}
+                    {cart.length === 3 && <p>3 ta ki korbi</p>}
+                    {cart.length === 5 || <p>aro order kor!!</p>}
 
 
 
