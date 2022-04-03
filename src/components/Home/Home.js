@@ -7,8 +7,14 @@ const Home = () => {
     const [cart, setCart] = useState([])
     console.log(cart);
     const handleCart = selectedItem => {
-        const newCart = [...cart, selectedItem]
-        setCart(newCart)
+        const exists = cart.find(products => products.id === selectedItem.id)
+        if (!exists) {
+            const newCart = [...cart, selectedItem]
+            setCart(newCart)
+        }
+        else {
+            alert('koida lage tor!!')
+        }
 
     }
     const removedItem = item => {
