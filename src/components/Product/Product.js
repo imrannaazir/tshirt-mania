@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Product = ({ product, product: { gender, name, price, picture } }) => {
-    console.log(product);
+const Product = ({ product, handleCart, product: { gender, name, price, picture, id } }) => {
+    // console.log(product);
+
 
     return (
-        <div className='border w-[300px]'>
+        <div className='border rounded-md w-[300px] shadow-lg'>
 
             <img className='w-[280px] h-[280px] border m-auto mt-2 rounded-md' src={picture} alt="" />
 
@@ -13,7 +14,7 @@ const Product = ({ product, product: { gender, name, price, picture } }) => {
                 <p>Price: ${price}</p>
                 <p>Gender: {gender}</p>
             </div>
-            <button className='bg-blue-400 w-[100%] border rounded-lg'>Add to Cart</button>
+            <button onClick={() => handleCart(product)} className='bg-blue-400 w-[100%] border rounded-md p-1 font-semibold'>Add to Cart</button>
 
         </div>
     );
